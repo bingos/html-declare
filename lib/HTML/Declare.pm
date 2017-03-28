@@ -1,13 +1,13 @@
 package HTML::Declare;
 
+#ABSTRACT: For When Template Systems Are Too Huge And Heredocs Too Messy
+
 use strict;
 use warnings;
 use base 'Exporter';
 use HTML::Entities 'encode_entities';
 
 use overload '""' => sub { shift->as_html };
-
-our $VERSION = '2.4';
 
 sub TAG (@) {
     my $attributes = shift;
@@ -259,11 +259,8 @@ sub tag {
 }
 
 1;
-__END__
 
-=head1 NAME
-
-HTML::Declare - For When Template Systems Are Too Huge And Heredocs Too Messy
+=pod
 
 =head1 SYNOPSIS
 
@@ -493,17 +490,8 @@ shouldn't be encoded or L<HTML::Declare> instances.
 
 =head2 VAR
 
-=head1 AUTHOR
-
-Sebastian Riedel, C<sri@oook.de>
-
 =head1 THANK YOU
 
 Tatsuhiko Miyagawa
-
-=head1 LICENSE
-
-This library is free software, you can redistribute it and/or modify it under
-the same terms as Perl itself.
 
 =cut
